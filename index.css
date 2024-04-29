@@ -36,10 +36,49 @@ margin: auto;
     flex: 80%;
     background-color: red;
     display: grid;
-    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: repeat(4, 1fr); /* Define your grid columns */
+    /* grid-template-rows: 100px 100px 100px 100px;
     grid-template-columns: 100px 100px 100px 100px;
-
+     */
 }
+
+.article1 , .article3, .article4, .article5, .article6, .article7 {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    /* border: 1px solid black; */
+}
+
+.article2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageholder {
+    flex: 1;
+}
+
+.articletext1 {
+    flex: 1;
+    font-size: large;
+    text-transform: capitalize;
+}
+
+
+.imageholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+}
+
+.article2 {
+    /* grid-area: 1 / 2 / 2 / 3; */
+    grid-column: span 2;
+}
+
+
 
 .disnews {
     flex: 20%;
