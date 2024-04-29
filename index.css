@@ -25,13 +25,6 @@ height: 800px;
 margin: auto;
 }
 
-.hashheader{
-    /* display: flex; */
-    background-color: black;
-    height: 50px;
-    width: 100%;
-}
-
 .mainnews {
     flex: 80%;
     background-color: red;
@@ -83,4 +76,35 @@ margin: auto;
 .disnews {
     flex: 20%;
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+}
+
+.randommeni {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.randommeni span {
+    display: inline-block; 
+}
+
+.hashheader {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: wheat;
+}
+
+.hashheader span {
+    margin-left: 21px;
+    display: inline-block; 
 }
