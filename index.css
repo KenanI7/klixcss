@@ -1,22 +1,17 @@
 body {
     margin: 0;
     background-color: rgb(37, 37, 37);
+    /* overflow-x: hidden; */
 }
-
-
-/* .header {
-    background-color: yellowgreen;
-    height: 40px;
-    margin-bottom: 20px;
-} */
 
 
 .firstcontainer {
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 80%;
-    align-items: center; /* Center items horizontally */
+    width: 65%;
+    align-items: center;
+    max-height: fit-content;
 
 }
 
@@ -24,8 +19,8 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-height: 800px;
     margin: auto;
+    align-items: self-start;
 }
 
 .mainnews {
@@ -35,18 +30,15 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
-}
-
-/* Add thin borders to all grid items */
-.mainnews > * {
-    box-shadow: 0 0 0 0.5px white; /* Adjust color as needed */
-    z-index: 1; /* Set a z-index for the borders */
+    grid-auto-rows: 300px;
 
 }
 
-/* Optionally, remove borders from the last row and last column */
+.mainnews>* {
+    box-shadow: 0 0 0 0.5px white;
+    z-index: 1;
 
-
+}
 
 .article1,
 .article3,
@@ -65,31 +57,55 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    grid-column: span 2;
+    position: relative;
 }
 
 .imageholder {
     flex: 1;
+    width: 100%;
+    /* height: 100%; */
+    /* max-height: 300px; */
+    overflow: hidden;
+}
+
+.imageholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article2 .imageholder {
+    flex: 2;
+}
+
+.article2 img {
+    width: 100%;
+    object-fit: cover;/
 }
 
 .articletext1 {
     flex: 1;
     font-size: large;
     text-transform: capitalize;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
-
-.imageholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+.articletext1 p,
+h2 {
+    margin-top: 2px;
+    flex: 1;
 }
 
-.article2 {
-    /* grid-area: 1 / 2 / 2 / 3; */
-    grid-column: span 2;
+.sati {
+    flex: 1;
 }
 
-
+#article2 {
+    text-align: left;
+}
 
 .disnews {
     flex: 20%;
@@ -101,6 +117,7 @@ body {
     background-color: rgb(17, 17, 17);
     color: white;
     padding: 7px;
+    max-height: 589px;
 }
 
 .randommeni {
@@ -138,18 +155,19 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 80%;
     margin: auto;
     padding: 10px;
     background-color: rgb(17, 17, 17);
     color: white;
     margin-bottom: 15px;
+    margin-right: 0;
+
 }
 
 .headerholder {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    width: 63%;
+    justify-content: center;
 }
 
 .logo {
@@ -161,7 +179,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 50%;
+    width: 60%;
     align-items: center;
     margin-right: auto;
 }
@@ -169,6 +187,7 @@ header {
 .menu-container a {
     color: white;
     text-decoration: none;
+    margin-left: 6px;
 }
 
 .socialmediaicons {
@@ -176,15 +195,268 @@ header {
     align-items: center;
 }
 
+.hamburger {
+    display: flex;
+    align-items: center;
+}
 
 
 
 .secondcontainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Each column takes up 1 fraction of the available space */
-    grid-template-rows: repeat(2, 1fr); /* Each row takes up 1 fraction of the available space */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     width: 100%;
     height: 100%;
-    height: 500px;
-    margin-top: 10px;
+    margin-top: 50px;
+    gap: 5px;
+}
+
+
+
+.article11,
+.article22,
+.article33,
+.article44,
+.article55,
+.article66 {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 7px;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .headerholder {
+        width: 70%;
+    }
+
+
+    .secondcontainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        gap: 5px;
+    }
+
+    .article11,
+    .article22,
+    .article33,
+    .article44,
+    .article55,
+    .article66 {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding: 7px;
+    }
+
+    .article33,
+    .article55,
+    .article66 {
+        grid-row: 2;
+    }
+
+    .article44,
+    .article22,
+    .article11 {
+        grid-row: 1;
+    }
+
+    #imageholder55 {
+        display: none;
+    }
+
+    .article55 h2 {
+        flex: 0;
+    }
+
+    #sati55 {
+        flex: 1;
+    }
+
+    @media screen and (max-width: 915px) {
+
+        body {
+            background-color: rgb(17, 17, 17);
+        }
+
+        .disnews {
+            display: none;
+        }
+
+        .firstcontainer {
+            width: 100%;
+        }
+
+        .hashheader {
+            white-space: nowrap;
+            font-size: calc(10px + 1vw);
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .mainnews {
+            grid-template-columns: 1fr;
+        }
+
+        .article2 {
+            grid-column: 1 / span 1;
+            grid-row: 1;
+
+        }
+
+        .article1,
+        .article3,
+        .article4,
+        .article5,
+        .article6,
+        .article7 {
+            grid-column: 1;
+            grid-row: auto;
+            flex-direction: row;
+            padding: 5px;
+        }
+
+        .article1 p,
+        h2 {
+            padding: 7px;
+            margin-left: 9px
+        }
+
+        .article3 p,
+        h2 {
+            padding: 7px;
+            margin-left: 9px
+        }
+
+        .article4 p,
+        h2 {
+            padding: 7px;
+            margin-left: 9px
+        }
+
+        .article5 p,
+        h2 {
+            padding: 7px;
+            margin-left: 9px
+        }
+
+        .article6 p,
+        h2 {
+            padding: 7px;
+            margin-left: 9px
+        }
+
+        .article7 p,
+        h2 {
+            padding: 7px;
+            margin-left: 9px
+        }
+
+
+
+        .imageholder {
+            flex: 1;
+        }
+
+        .articletext1 {
+            flex: 3;
+                }
+
+        .sati {
+            display: flex;
+            align-items: self-end;
+            padding: 7px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .secondcontainer {
+display: flex;
+flex-direction: column;
+            margin-top: 50px;
+        }
+        
+
+
+        
+
+        .article22,
+        .article44
+         {
+            display: flex;
+            flex-direction: row;
+            color: white;
+            padding: 7px;
+        }
+        
+
+        /* .article22,
+        .article44,
+        .article55 {
+            flex-direction: column; /* Set flex direction to column for these articles */
+        
+        
+        .article33,
+        .article66 {
+            display: flex;
+            flex-direction: column; /* Set flex direction to column for these articles */
+            order: 6;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+        .headerholder {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .menu-container {
+            display: none;
+        }
+
+        .hamburger {
+            order: -1;
+        }
+
+        .socialmediaicons {
+            margin-right: 18px;
+        }
+
+    }
 }
