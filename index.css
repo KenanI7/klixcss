@@ -4,7 +4,6 @@ body {
     /* overflow-x: hidden; */
 }
 
-
 .firstcontainer {
     display: flex;
     flex-direction: column;
@@ -200,8 +199,6 @@ header {
     align-items: center;
 }
 
-
-
 .secondcontainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -211,8 +208,6 @@ header {
     margin-top: 50px;
     gap: 5px;
 }
-
-
 
 .article11,
 .article22,
@@ -225,7 +220,6 @@ header {
     color: white;
     padding: 7px;
 }
-
 
 
 
@@ -361,15 +355,13 @@ header {
             margin-left: 9px
         }
 
-
-
         .imageholder {
             flex: 1;
         }
 
         .articletext1 {
             flex: 3;
-                }
+        }
 
         .sati {
             display: flex;
@@ -378,66 +370,26 @@ header {
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
         .secondcontainer {
-display: flex;
-flex-direction: column;
+            display: flex;
+            flex-direction: column;
             margin-top: 50px;
         }
-        
 
-
-        
-
-        .article22,
-        .article44
-         {
+    .article22,
+        .article44 {
             display: flex;
             flex-direction: row;
             color: white;
             padding: 7px;
         }
-        
 
-        /* .article22,
-        .article44,
-        .article55 {
-            flex-direction: column; /* Set flex direction to column for these articles */
-        
-        
         .article33,
         .article66 {
             display: flex;
-            flex-direction: column; /* Set flex direction to column for these articles */
+            flex-direction: column;
             order: 6;
         }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
 
         .headerholder {
             flex-direction: row;
